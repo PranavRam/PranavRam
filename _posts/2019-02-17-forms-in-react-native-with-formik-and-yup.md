@@ -56,11 +56,7 @@ yarn add formik yup react-native-flash-message react-native-keyboard-aware-scrol
 
 The following project map should give you a good understanding of where the files are located in case you get stuck.
 
-import MapImg from "../../assets/blog_assets/react-native-formik-yup/map.png"
-
-<>
-  <p><img src={MapImg} alt="Alt text" title="React Native Formik Yup Map" /></p>
-</>
+![React Native Formik Yup Map](/images/react-native-formik-map.png)
 
 
 #### Walkthrough
@@ -245,11 +241,7 @@ const styles = StyleSheet.create({
 
 After all this, you'll be greeted with the follow non-functioning, albeit pretty, registration page.
 
-import Yup1Img from "../../assets/blog_assets/react-native-formik-yup/1.png"
-
-<>
-  <p><img src={Yup1Img} alt="Alt text" title="React Native Formik Yup 1" /></p>
-</>
+![React Native Formik Yup 1](/images/react-native-formik-1.png)
 
 
 Moving on, we'll now introduce **Formik** and **Yup** to help us with the form management
@@ -524,19 +516,15 @@ To do that, we simply set that passwordConfirm is required and is the same as th
 
 That's all there is to it. We've already hooked up this function to Formik's validate prop so we're good to go. We've also added the necessary error messages below each of the inputs so that we know what went wrong.
 
-import FormikImg2 from "../../assets/blog_assets/react-native-formik-yup/2.png"
-import FormikImg3 from "../../assets/blog_assets/react-native-formik-yup/3.png"
-
-
-<div className="flex flex-row space-x-2">
-  <div style={{display: "flex", flexDirection: "column"}} className="text-center sm:w-1/2">
-    <p className="text-xs text-white-800">All fields are incorrect</p>
-    <img src={FormikImg2} />
+<div class="flex flex-row space-x-2">
+  <div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
+     <p class="text-xs text-gray-800">All fields are incorrect</p>
+     ![All fields incorrect](/images/react-native-formik-2.png)
   </div>
-  <div style={{display: "flex", flexDirection: "column"}} className="text-center sm:w-1/2">
-    <p className="text-xs text-white-800">Passwords aren't the same</p>
-    <img src={FormikImg3} />
-  </div>
+<div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
+<p class="text-xs text-gray-800">Passwords aren't the same</p>
+![Passwords not the same](/images/react-native-formik-3.png)
+</div>
 </div>
 
 
@@ -654,7 +642,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-![React Native Formik Yup All Valid](./react-native-formik-yup/4.png)
+![React Native Formik Yup All Valid](/images/react-native-formik-4.png)
 
 Finally, we'll add the KeyboardAwareScrollView to our form to ensure that the keyboard doesn't cover the inputs when visible.
 
@@ -773,11 +761,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-import Img5 from "../../assets/blog_assets/react-native-formik-yup/5.png"
-
-<>
-  <p><img src={Img5} alt="Alt text" title="Ract Native Formik Yup Keyboard Aware" /></p>
-</>
+![React Native Formik Yup Keyboard Aware](/images/react-native-formik-5.png)
 
 
 We'll make this form view more robust in the next post where we'll enable scrolling when the form exceeds the screen height

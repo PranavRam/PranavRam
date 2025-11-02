@@ -32,36 +32,30 @@ Let's take a look at the problem we're trying to solve:
 
 When our form content takes up less space than the height of the screen (minus the statusbar), everything looks fine:
 
-import UIMock1Img from "../../assets/blog_assets/react-native-responsive-scrollview/1-1.png"
-import UIMock2Img from "../../assets/blog_assets/react-native-responsive-scrollview/1-2.png"
-
-<div className="flex flex-row space-x-2">
-  <div className="text-center sm:w-1/2">
-    <p className="text-xs text-white-800">iPhone X</p>
-    <img src={UIMock1Img} />
-  </div>
-  <div className="text-center sm:w-1/2">
-    <p className="text-xs text-white-800">iPhone 5s</p>
-    <img src={UIMock2Img} />
-  </div>
+<div class="flex flex-row space-x-2">
+  <div class="text-center sm:w-1/2">
+     <p class="text-xs text-gray-800">iPhone X</p>
+    ![iPhone X](/images/react-native-responsive-1-1.png)
+</div>
+<div class="text-center sm:w-1/2">
+<p class="text-xs text-gray-800">iPhone 5s</p>
+  ![iPhone 5s](/images/react-native-responsive-1-2.png)
+</div>
 </div>
 
 
 
 Now let's add another field to the form, **Name**. This is the result
 
-import UIMock21Img from "../../assets/blog_assets/react-native-responsive-scrollview/2-1.png"
-import UIMock22Img from "../../assets/blog_assets/react-native-responsive-scrollview/2-2.png"
-
-<div className="flex flex-row space-x-2">
-  <div className="text-center sm:w-1/2">
-    <p className="text-xs text-white-800">iPhone X</p>
-    <img src={UIMock21Img} />
-  </div>
-  <div className="text-center sm:w-1/2">
-    <p className="text-xs text-white-800">iPhone 5s</p>
-    <img src={UIMock22Img} />
-  </div>
+<div class="flex flex-row space-x-2">
+  <div class="text-center sm:w-1/2">
+     <p class="text-xs text-gray-800">iPhone X</p>
+    ![iPhone X](/images/react-native-responsive-2-1.png)
+</div>
+<div class="text-center sm:w-1/2">
+<p class="text-xs text-gray-800">iPhone 5s</p>
+  ![iPhone 5s](/images/react-native-responsive-2-2.png)
+</div>
 </div>
 
 See the problem with the iPhone 5S display? The button is cut off. In this case, we want to let the user scroll the view while for the iPhone X, things will continue to be the same.
@@ -329,15 +323,15 @@ const styles = StyleSheet.create({
 
 Great, the scroll works for the iPhone 5S but it also is enabled for the iPhone X even though we're well within the screen height.
 
-<div className="flex flex-row space-x-2">
-  <div style={{display: "flex", flexDirection: "column"}} className="text-center sm:w-1/2">
-    <p className="text-xs text-white-800">iPhone X</p>
-    <img src="https://media.giphy.com/media/x48p0FKT6s4mzM5yEt/giphy.gif" />
-  </div>
-  <div style={{display: "flex", flexDirection: "column"}} className="text-center sm:w-1/2">
-    <p className="text-xs text-white-800">iPhone 5s</p>
-    <img src="https://media.giphy.com/media/5hmgcWYonGQC8CWCzC/giphy.gif" />
-  </div>
+<div class="flex flex-row space-x-2">
+<div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
+<p class="text-xs text-gray-800">iPhone X</p>
+![iPhone X scrolling](https://media.giphy.com/media/x48p0FKT6s4mzM5yEt/giphy.gif)
+</div>
+<div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
+<p class="text-xs text-gray-800">iPhone 5s</p>
+![iPhone 5s scrolling](https://media.giphy.com/media/5hmgcWYonGQC8CWCzC/giphy.gif)
+</div>
 </div>
 
 We want a way to get the current height of the scrollview to make a decision, as to whether we want to allow the user to scroll the screen. ScrollView has a property called **onContentSizeChange** that gives us just that. We'll calculate the height of the current display, and if it is greater than the scrollview context plus the size of the statusbar, we'll toggle the flag **scrollEnabled**.
@@ -512,15 +506,15 @@ const styles = StyleSheet.create({
 });
 ```
 
-<div className="flex flex-row space-x-2">
-  <div style={{display: "flex", flexDirection: "column"}} className="text-center sm:w-1/2">
-    <p className="text-xs text-white-800">iPhone X</p>
-    <img src="https://media.giphy.com/media/5R1Wiz1GzKtGc8TI08/giphy.gif" />
-  </div>
-  <div style={{display: "flex", flexDirection: "column"}} className="text-center sm:w-1/2">
-    <p className="text-xs text-white-800">iPhone 5s</p>
-    <img src="https://media.giphy.com/media/oX74fhD8kacF54WvJi/giphy.gif" />
-  </div>
+<div class="flex flex-row space-x-2">
+<div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
+<p class="text-xs text-gray-800">iPhone X</p>
+![iPhone X](https://media.giphy.com/media/5R1Wiz1GzKtGc8TI08/giphy.gif)
+</div>
+<div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
+<p class="text-xs text-gray-800">iPhone 5s</p>
+![iPhone 5s](https://media.giphy.com/media/oX74fhD8kacF54WvJi/giphy.gif)
+</div>
 </div>
 
 Let's finally move on to giving the user an indication that there's more content below. I've chosen to use a down arrow icon that will disappear when the user has scrolled close to the end.
@@ -741,8 +735,8 @@ const styles = StyleSheet.create({
 });
 ```
 
-<div style={{display: "flex", justifyContent: "center"}}>
-  <img src="https://media.giphy.com/media/wZshEZLkTsQyF4CBX6/giphy.gif" />
+<div style="display: flex; justify-content: center">
+![iPhone scrolling demo](https://media.giphy.com/media/wZshEZLkTsQyF4CBX6/giphy.gif)
 </div>
 
 And that's a wrap for this 2 part series.

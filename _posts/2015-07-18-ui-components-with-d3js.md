@@ -8,10 +8,6 @@ tags: ["javascript", "d3.js"]
 image: "/images/js.png"
 ---
 
-import EvidenceBoxImg from "../../assets/blog_assets/ui-components-with-d3js/EvidenceBox.png"
-import BoxBorderImg from "../../assets/blog_assets/ui-components-with-d3js/box-border.png"
-import BoxHeaderImg from "../../assets/blog_assets/ui-components-with-d3js/box-header.png"
-
 Today, we're going to look at doing something different with d3js. Most of the material online is geared towards creating visualizations with this amazing library, which is great, but it isn't the only thing we can use it for!
 
 Before going heads in with the code, let's take a higher level look at what we'll be building.
@@ -30,7 +26,8 @@ The Evidence Box should have:
 Okay, that's simple enough. Before we actually go ahead I'd like to sketch this 'Evidence Box' out, so that we're are both clear on what it should like. I find that doing this makes my life easier since I have a good idea of the final product;
 
 And....voila!
-<img src={EvidenceBoxImg} />
+
+![Evidence Box](/images/ui-components-with-d3js/EvidenceBox.png)
 
 Here's what I'd like the component to look like. I've gone ahead and annoted the sketch so don't mistake that as part of the UI! Interestingly, you'd might want to extend the project by giving the user an option to view something similar for say, a tutorial.
 
@@ -103,7 +100,7 @@ You'll need an index.html file with the required dependencies; d3.js and app.js
 
 Bring up your webserver and you should be greeted with the following empty box with a border!
 
-<img src={BoxBorderImg}/>
+![Box Border](/images/ui-components-with-d3js/box-border.png)
 
 Let's add a header to our box.
 
@@ -153,7 +150,7 @@ function EvidenceBox(){
 
 Awesome! This is what you should have now.
 
-<img src={BoxHeaderImg} />
+![Box Header](/images/ui-components-with-d3js/box-header.png)
 
 Hmmmm. Where's the data? Let's throw in some.
 
@@ -220,9 +217,8 @@ headerText
   })
   .text(function(d){ return d.title });
 ```
-import BoxHeaderTextImg from "../../assets/blog_assets/ui-components-with-d3js/box-header-text.png"
 
-<img src={BoxHeaderTextImg} />
+![Box Header Text](/images/ui-components-with-d3js/box-header-text.png)
 
 This component is already looking good. Let's add some of our entities to the body of the evidences.
 
@@ -276,9 +272,7 @@ entities.each(function(entityData){
 });
 ```
 
-import EntitiesImg from "../../assets/blog_assets/ui-components-with-d3js/entities.png"
-
-<img src={EntitiesImg} />
+![Entities](/images/ui-components-with-d3js/entities.png)
 
 Now that we have our entities, we're going to show the count in the header.
 
@@ -315,9 +309,7 @@ entityCount
   .text(function(d){ return d.entities.length; });
 ```
 
-import EntityCountImg from "../../assets/blog_assets/ui-components-with-d3js/entity-count.png"
-
-<img src={EntityCountImg} />
+![Entity Count](/images/ui-components-with-d3js/entity-count.png)
 
 Hang in there! We're almost done! We're going to add the open/close functionality and we'd have a pretty useful component!
 
@@ -361,9 +353,7 @@ openClose
 
 Note in the above listing, we're adding a data-is-open custom attribute and setting it to the default value of true. We'll use this attribute to show/hide the body. Your evidence box should look like the following listing:
 
-import OpenCloseBtnImg from "../../assets/blog_assets/ui-components-with-d3js/open-close-button.png"
-
-<img src={OpenCloseBtnImg} />
+![Open Close Button](/images/ui-components-with-d3js/open-close-button.png)
 
 I hope you can see the light at the end of the tunnel. We're going to add open/close functionality.
 
@@ -415,13 +405,7 @@ box.style('border', '2px solid black');
 
 And you're done! Good job getting this far! Clicking on the open/close button should show/hide the div like this:
 
-import OpenBoxImg from "../../assets/blog_assets/ui-components-with-d3js/open-box.png"
-import CloseBoxImg from "../../assets/blog_assets/ui-components-with-d3js/close-box.png"
-
-<div>
-  <img src={OpenBoxImg} />
-  <img src={CloseBoxImg} />
-</div>
+![Open Box](/images/ui-components-with-d3js/open-box.png) ![Close Box](/images/ui-components-with-d3js/close-box.png)
 
 Change the container code to do the following. It's going to update the component with the new data!
 
