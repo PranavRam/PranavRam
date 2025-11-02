@@ -1,0 +1,12 @@
+{
+  "name": "pr_website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/site.css -o ./_site/css/site.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "tailwindcss": "^3.4.1"
+  }
+}

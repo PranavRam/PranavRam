@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom code highlighting styles */
+div[data-rehype-pretty-code-fragment] { 
+  background-color: #111;
+}
+
+pre > code {
+  display: grid;
+  background-color: rgba(200, 200, 255, .09);
+}
+
+.highlighted {
+  background-color: rgba(200,200,255,.1);
+  border-left-color: #60a5fa;
+  border-left-width: 3px;
+  border-left-style: solid;
+}
+
+code[data-line-numbers] > .line::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 2rem;
+  text-align: right;
+  color: gray;
+}
