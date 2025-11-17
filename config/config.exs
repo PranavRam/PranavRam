@@ -18,19 +18,19 @@ config :tableau, :assets,
 config :tableau, :config,
 url: "http://localhost:4999",
 markdown: [
-    mdex: [
-      extension: [
-        table: true,
-        header_ids: "",
-        tasklist: true,
-        strikethrough: true,
-        autolink: true,
-        alerts: true,
-        footnotes: true
-      ],
-      render: [unsafe: true]
-    ]
-  ]
+mdex: [
+extension: [
+  table: true,
+   header_ids: "",
+   tasklist: true,
+   strikethrough: true,
+   autolink: true,
+   alerts: true,
+   footnotes: true
+ ],
+ render: [unsafe: true]
+ ]
+ ]
 
 config :tableau, Tableau.PageExtension, enabled: true
 config :tableau, Tableau.PostExtension, enabled: true

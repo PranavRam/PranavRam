@@ -10,12 +10,12 @@ image: "/images/js.png"
 
 This post is a follow up to **[Forms in React Native with Formik and Yup](https://www.pranavram.com/blog/react-native-formik-yup/)** where we'll make a responsive scrollview.
 
-<div style={{marginBottom: 16}}>
-  <div data-snack-id="@pranavram/react-native-responsive-scrollview" 
-    data-snack-platform="ios" 
-    data-snack-preview="true" 
-    data-snack-theme="light" 
-    style={{width: "100%", height: 800}} />
+<div style="margin-bottom: 16px">
+  <div data-snack-id="@pranavram/react-native-responsive-scrollview"
+    data-snack-platform="ios"
+    data-snack-preview="true"
+    data-snack-theme="light"
+    style="width: 100%; height: 800px;" />
 </div>
 
 ### Goals
@@ -35,11 +35,11 @@ When our form content takes up less space than the height of the screen (minus t
 <div class="flex flex-row space-x-2">
   <div class="text-center sm:w-1/2">
      <p class="text-xs text-gray-800">iPhone X</p>
-    ![iPhone X](/images/react-native-responsive-1-1.png)
+    <img src="/images/react-native-responsive-1-1.png" alt="iPhone X" class="mx-auto block">
 </div>
 <div class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone 5s</p>
-  ![iPhone 5s](/images/react-native-responsive-1-2.png)
+  <img src="/images/react-native-responsive-1-2.png" alt="iPhone 5s" class="mx-auto block">
 </div>
 </div>
 
@@ -50,11 +50,11 @@ Now let's add another field to the form, **Name**. This is the result
 <div class="flex flex-row space-x-2">
   <div class="text-center sm:w-1/2">
      <p class="text-xs text-gray-800">iPhone X</p>
-    ![iPhone X](/images/react-native-responsive-2-1.png)
+    <img src="/images/react-native-responsive-2-1.png" alt="iPhone X" class="mx-auto block">
 </div>
 <div class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone 5s</p>
-  ![iPhone 5s](/images/react-native-responsive-2-2.png)
+  <img src="/images/react-native-responsive-2-2.png" alt="iPhone 5s" class="mx-auto block">
 </div>
 </div>
 
@@ -326,11 +326,11 @@ Great, the scroll works for the iPhone 5S but it also is enabled for the iPhone 
 <div class="flex flex-row space-x-2">
 <div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone X</p>
-![iPhone X scrolling](https://media.giphy.com/media/x48p0FKT6s4mzM5yEt/giphy.gif)
+<img src="/images/iphone-x-scrolling.gif" alt="iPhone X scrolling" class="mx-auto block">
 </div>
 <div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone 5s</p>
-![iPhone 5s scrolling](https://media.giphy.com/media/5hmgcWYonGQC8CWCzC/giphy.gif)
+<img src="/images/iphone-5s-scrolling.gif" alt="iPhone 5s scrolling" class="mx-auto block">
 </div>
 </div>
 
@@ -509,11 +509,11 @@ const styles = StyleSheet.create({
 <div class="flex flex-row space-x-2">
 <div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone X</p>
-![iPhone X](https://media.giphy.com/media/5R1Wiz1GzKtGc8TI08/giphy.gif)
+<img src="/images/iphone-x.gif" alt="iPhone X" class="mx-auto block">
 </div>
 <div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone 5s</p>
-![iPhone 5s](https://media.giphy.com/media/oX74fhD8kacF54WvJi/giphy.gif)
+<img src="/images/iphone-5s.gif" alt="iPhone 5s" class="mx-auto block">
 </div>
 </div>
 
@@ -735,9 +735,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-<div style="display: flex; justify-content: center">
-![iPhone scrolling demo](https://media.giphy.com/media/wZshEZLkTsQyF4CBX6/giphy.gif)
-</div>
+<img src="/images/iphone-scrolling-demo.gif" alt="iPhone scrolling demo" class="mx-auto block">
 
 And that's a wrap for this 2 part series.
 
