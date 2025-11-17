@@ -20,6 +20,10 @@ defmodule PrWebsite.RootLayout do
         </title>
 
         <link rel="stylesheet" href="/css/site.css" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <script src="/js/site.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 

@@ -24,17 +24,20 @@ defmodule PrWebsite.MixProject do
   defp deps do
   [
   {:tableau, "~> 0.26"},
-      {:mdex_mermaid, "~> 0.1"}
+  {:mdex_mermaid, "~> 0.1"},
+      {:yaml_elixir, "~> 2.9"}
 
   # {:dep_from_hexpm, "~> 0.3.0"},
     # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
-    ]
-  end
+  ]
+end
 
   defp aliases do
   [
-  build: ["tableau.build"],
-    post: ["pr_website.gen.post"]
-    ]
-  end
+  build: ["pr_website.gen.tags", "tableau.build"],
+  "tableau.build": ["pr_website.gen.tags", "tableau.build"],
+  post: ["pr_website.gen.post"],
+    tags: ["pr_website.gen.tags"]
+  ]
+end
 end
