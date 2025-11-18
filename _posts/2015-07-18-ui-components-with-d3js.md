@@ -31,7 +31,7 @@ And....voila!
 
 Here's what I'd like the component to look like. I've gone ahead and annoted the sketch so don't mistake that as part of the UI! Interestingly, you'd might want to extend the project by giving the user an option to view something similar for say, a tutorial.
 
-```js
+```js highlight_lines=1
 // our reusable chart named EvidenceBox
 function EvidenceBox(){
   // default component values

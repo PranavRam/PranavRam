@@ -20,7 +20,7 @@ permalink: "/about/"
 
 <div class="text-center">
 Co-Founder & Promoter at <a href="https://www.fyndna.com" target="_blank">FYN<strong>DNA</strong></a> 
-<br /> We're building the next generation of Core Banking solutions - Join Us!
+<br /> We're building the next generation of Core Banking solutions - <a href="https://www.fyndna.com/careers" target="_blank">Join Us!</a>
 <br /><br />
 Ex. Wadhwani AI, PaySense (Acquired by PayU), Salesforce <br />
 UIUC / Computer Engineering, Georgia Tech / Computer Science

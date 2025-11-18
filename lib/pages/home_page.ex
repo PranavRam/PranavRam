@@ -23,10 +23,10 @@ defmodule PrWebsite.HomePage do
 
       <!-- Description -->
       <div class="w-full prose dark:prose-invert lg:prose-xl prose-h1:mb-0 lg:prose-h1:mb-0 prose-h3:mb-0 lg:prose-h3:mb-0 prose-p:my-2 lg:prose-p:my-2">
-        <p class="pt-4">
-          Interested in solving challenging engineering and data science problems? <br />
-          Join us at <a href="https://www.fyndna.com" target="_blank">FYN<strong>DNA</strong></a>!
-        </p>
+      <p class="pt-4 text-center">
+      Interested in solving challenging engineering and data science problems? <br />
+      Join us at <a href="https://www.fyndna.com" target="_blank">FYN<strong>DNA</strong></a>!
+      </p>
       </div>
 
       <!-- Recent Posts -->

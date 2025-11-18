@@ -2,7 +2,7 @@
 layout: PrWebsite.PostLayout
 title: "Using Moonshine for Speech-to-Text with Elixir and ONNX"
 summary: "Learn how to integrate Moonshine, a real-time speech-to-text model, with Elixir using ONNX and Livebook for interactive audio transcription."
-date: 2025-11-17
+date: 2025-03-31
 permalink: /posts/:title/
 tags: ["elixir", "onnx", "speech-to-text", "livebook"]
 ---

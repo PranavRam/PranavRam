@@ -46,18 +46,18 @@ defmodule PrWebsite.RootLayout do
 
             <!-- Desktop Navigation -->
             <nav class="sm:flex items-center gap-4 hidden flex-1 justify-end">
-              <a
-                href="/"
-                class="relative no-underline font-medium text-black dark:text-white before:content-[''] before:absolute before:block before:w-full before:h-0.5 before:bottom-0 before:left-0 before:bg-black dark:before:bg-white before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
-              >
-                Home
-              </a>
-              <a
-                href="/blog"
-                class="relative no-underline font-medium text-black dark:text-white before:content-[''] before:absolute before:block before:w-full before:h-0.5 before:bottom-0 before:left-0 before:bg-black dark:before:bg-white before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
-              >
-                Blog
-              </a>
+            <a
+            href="/blog"
+            class="relative no-underline font-medium text-black dark:text-white before:content-[''] before:absolute before:block before:w-full before:h-0.5 before:bottom-0 before:left-0 before:bg-black dark:before:bg-white before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
+            >
+            Blog
+            </a>
+            <a
+            href="/tags"
+            class="relative no-underline font-medium text-black dark:text-white before:content-[''] before:absolute before:block before:w-full before:h-0.5 before:bottom-0 before:left-0 before:bg-black dark:before:bg-white before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
+            >
+            Tags
+            </a>
               <a
                 href="/about"
                 class="relative no-underline font-medium text-black dark:text-white before:content-[''] before:absolute before:block before:w-full before:h-0.5 before:bottom-0 before:left-0 before:bg-black dark:before:bg-white before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
