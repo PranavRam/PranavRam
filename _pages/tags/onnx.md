@@ -14,7 +14,7 @@ permalink: "/tags/onnx/"
 <div class="sm:w-1/2 mb-12">
 <div class="sm:mr-6">
 <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">
-Published November 17, 2025
+Published March 31, 2025
 </div>
 <a href="/posts/using-moonshine-for-speech-to-text-with-elixir-and-onnx/" class="text-2xl font-bold text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white no-underline block mb-2">
 Using Moonshine for Speech-to-Text with Elixir and ONNX
