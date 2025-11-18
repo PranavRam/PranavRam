@@ -5,4 +5,12 @@ defmodule PrWebsite do
       unquote(EEx.compile_string(bin, opts))
     end
   end
+
+  def base_path(config) do
+    if config && config.base_path do
+      String.trim_trailing(config.base_path, "/")
+    else
+      ""
+    end
+  end
 end

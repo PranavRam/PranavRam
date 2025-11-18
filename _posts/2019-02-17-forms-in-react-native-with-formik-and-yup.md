@@ -56,7 +56,7 @@ yarn add formik yup react-native-flash-message react-native-keyboard-aware-scrol
 
 The following project map should give you a good understanding of where the files are located in case you get stuck.
 
-<img src="/images/react-native-formik-map.png" alt="React Native Formik Yup Map" class="mx-auto block">
+<img src="/PranavRam/images/react-native-formik-map.png" alt="React Native Formik Yup Map" class="mx-auto block">
 
 
 #### Walkthrough
@@ -241,7 +241,7 @@ const styles = StyleSheet.create({
 
 After all this, you'll be greeted with the follow non-functioning, albeit pretty, registration page.
 
-<img src="/images/react-native-formik-1.png" alt="React Native Formik Yup 1" class="mx-auto block">
+<img src="/PranavRam/images/react-native-formik-1.png" alt="React Native Formik Yup 1" class="mx-auto block">
 
 
 Moving on, we'll now introduce **Formik** and **Yup** to help us with the form management
@@ -519,11 +519,11 @@ That's all there is to it. We've already hooked up this function to Formik's val
 <div class="flex flex-row space-x-2">
   <div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
      <p class="text-xs text-gray-800">All fields are incorrect</p>
-     <img src="/images/react-native-formik-2.png" alt="All fields incorrect" class="mx-auto block">
+     <img src="/PranavRam/images/react-native-formik-2.png" alt="All fields incorrect" class="mx-auto block">
   </div>
 <div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">Passwords aren't the same</p>
-<img src="/images/react-native-formik-3.png" alt="Passwords not the same" class="mx-auto block">
+<img src="/PranavRam/images/react-native-formik-3.png" alt="Passwords not the same" class="mx-auto block">
 </div>
 </div>
 
@@ -759,7 +759,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-<img src="/images/react-native-formik-5.png" alt="React Native Formik Yup Keyboard Aware" class="mx-auto block">
+<img src="/PranavRam/images/react-native-formik-5.png" alt="React Native Formik Yup Keyboard Aware" class="mx-auto block">
 
 We'll make this form view more robust in the next post where we'll enable scrolling when the form exceeds the screen height
 

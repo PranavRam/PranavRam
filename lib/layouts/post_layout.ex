@@ -3,6 +3,7 @@ defmodule PrWebsite.PostLayout do
   import PrWebsite
 
   def template(assigns) do
+    base_path = PrWebsite.base_path(assigns.site[:config])
     ~H"""
     <article>
       <header>
@@ -15,12 +16,12 @@ defmodule PrWebsite.PostLayout do
         %>
         <div :if={tags != []} class="mt-2">
         <%= for tag <- tags do %>
-        <a href="/tags/<%= tag %>/" class="inline-block bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-full text-sm mr-2 mb-2 no-underline hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+        <a href="<%= base_path %>/tags/<%= tag %>/" class="inline-block bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-full text-sm mr-2 mb-2 no-underline hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
         #<%= tag %>
         </a>
         <% end %>
         </div>
-  </header>
+      </header>
 
     <%= render @inner_content %>
     </article>

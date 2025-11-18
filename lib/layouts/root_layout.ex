@@ -3,6 +3,7 @@ defmodule PrWebsite.RootLayout do
   import PrWebsite
 
   def template(assigns) do
+    base_path = PrWebsite.base_path(assigns.site[:config])
     ~H"""
     <!DOCTYPE html>
 
@@ -11,6 +12,7 @@ defmodule PrWebsite.RootLayout do
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
 
         <title>
           <%= [@page[:title], "Pranav Ram"]
@@ -19,12 +21,12 @@ defmodule PrWebsite.RootLayout do
               |> Enum.join(" ") %>
         </title>
 
-        <link rel="stylesheet" href="/css/site.css" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <script src="/js/site.js"></script>
+        <link rel="stylesheet" href="<%= base_path %>/css/site.css" />
+        <link rel="icon" type="image/x-icon" href="<%= base_path %>/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="<%= base_path %>/favicon-32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="<%= base_path %>/favicon-16.png" />
+        <link rel="icon" type="image/svg+xml" href="<%= base_path %>/favicon.svg" />
+        <script src="<%= base_path %>/js/site.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 
         <!-- Dark mode detection script -->
@@ -40,26 +42,26 @@ defmodule PrWebsite.RootLayout do
         <div class="px-4 md:px-0 md:max-w-2xl lg:max-w-3xl xl:max-w-5xl mx-auto min-h-full flex flex-col">
           <!-- Header -->
           <header class="flex justify-between items-center max-w-full w-full py-8 gap-x-12 md:gap-x-0">
-            <a href="/" class="text-3xl font-medium no-underline flex-1 m-0 not-prose md:my-4 text-black dark:text-white">
+            <a href="<%= base_path %>/" class="text-3xl font-medium no-underline flex-1 m-0 not-prose md:my-4 text-black dark:text-white">
               pranav/ram
             </a>
 
             <!-- Desktop Navigation -->
             <nav class="sm:flex items-center gap-4 hidden flex-1 justify-end">
             <a
-            href="/blog"
+            href="<%= base_path %>/blog"
             class="relative no-underline font-medium text-black dark:text-white before:content-[''] before:absolute before:block before:w-full before:h-0.5 before:bottom-0 before:left-0 before:bg-black dark:before:bg-white before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
             >
             Blog
             </a>
             <a
-            href="/tags"
+            href="<%= base_path %>/tags"
             class="relative no-underline font-medium text-black dark:text-white before:content-[''] before:absolute before:block before:w-full before:h-0.5 before:bottom-0 before:left-0 before:bg-black dark:before:bg-white before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
             >
             Tags
             </a>
               <a
-                href="/about"
+                href="<%= base_path %>/about"
                 class="relative no-underline font-medium text-black dark:text-white before:content-[''] before:absolute before:block before:w-full before:h-0.5 before:bottom-0 before:left-0 before:bg-black dark:before:bg-white before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
               >
                 About
@@ -78,7 +80,7 @@ defmodule PrWebsite.RootLayout do
             <div class="flex justify-center gap-4 mb-4">
               <a href="https://github.com/PranavRam" target="_blank" rel="noopener noreferrer" class="no-underline">
                 <img
-                  src="/images/github.webp"
+                  src="<%= base_path %>/images/github.webp"
                   alt="GitHub"
                   class="w-10 h-10 sm:w-12 sm:h-12 dark:invert"
                   loading="lazy"
@@ -86,7 +88,7 @@ defmodule PrWebsite.RootLayout do
               </a>
               <a href="https://twitter.com/PranavRam" target="_blank" rel="noopener noreferrer" class="no-underline">
                 <img
-                  src="/images/twitter.webp"
+                  src="<%= base_path %>/images/twitter.webp"
                   alt="Twitter"
                   class="w-10 h-10 sm:w-12 sm:h-12 dark:invert"
                   loading="lazy"
@@ -94,7 +96,7 @@ defmodule PrWebsite.RootLayout do
               </a>
               <a href="https://linkedin.com/in/pranavcnram" target="_blank" rel="noopener noreferrer" class="no-underline">
                 <img
-                  src="/images/linkedin.webp"
+                  src="<%= base_path %>/images/linkedin.webp"
                   alt="LinkedIn"
                   class="w-10 h-10 sm:w-12 sm:h-12 dark:invert"
                   loading="lazy"
@@ -108,7 +110,7 @@ defmodule PrWebsite.RootLayout do
               <div class="hidden sm:block"> • </div>
               <div>© <%= DateTime.utc_now().year %></div>
               <div class="hidden sm:block"> • </div>
-              <a href="/" class="no-underline text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white">
+              <a href="<%= base_path %>/" class="no-underline text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white">
                 pranav/ram
               </a>
             </div>

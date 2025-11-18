@@ -23,7 +23,7 @@ defmodule PrWebsite.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
   [
-  {:tableau, "~> 0.26"},
+  {:tableau, "~> 0.27"},
   {:mdex_mermaid, "~> 0.1"},
       {:yaml_elixir, "~> 2.9"}
 

@@ -6,13 +6,14 @@ defmodule PrWebsite.HomePage do
   import PrWebsite
 
   def template(assigns) do
+    base_path = PrWebsite.base_path(assigns.site[:config])
     ~H"""
     <div class="flex flex-col items-center">
       <!-- Hero Section with Avatar and Name -->
       <div class="flex flex-row items-center mb-4">
         <div class="flex items-center w-32 h-32 not-prose">
           <img
-            src="/images/avatar.jpg"
+            src="<%= base_path %>/images/avatar.jpg"
             alt="Pranav Ram"
             class="rounded-[50%] my-0"
             loading="lazy"
@@ -42,7 +43,7 @@ defmodule PrWebsite.HomePage do
 
                 <!-- Post Title -->
                 <a
-                href="<%= post.permalink %>"
+                href="<%= base_path %><%= post.permalink %>"
                 class="text-2xl font-bold text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white no-underline block mb-2"
                 >
                 <%= post.title %>
@@ -55,7 +56,7 @@ defmodule PrWebsite.HomePage do
 
                 <!-- Read More Link with Animated Underline -->
                 <a
-                href="<%= post.permalink %>"
+                href="<%= base_path %><%= post.permalink %>"
                 class="<%= "relative no-underline w-fit before:content-[''] before:absolute before:block before:w-full before:h-0.5 before:bottom-0 before:left-0 before:bg-black dark:before:bg-white before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100" %>"
                 >
                   <span class="font-medium text-black dark:text-white">Read more</span>
@@ -68,7 +69,7 @@ defmodule PrWebsite.HomePage do
         <!-- Older Posts Link -->
         <div class="flex justify-end mt-8">
           <a
-            href="/blog"
+            href="<%= base_path %>/blog"
             class="relative no-underline w-fit before:content-[''] before:absolute before:block before:w-full before:h-0.5 before:bottom-0 before:left-0 before:bg-black dark:before:bg-white before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100"
           >
             <span class="font-medium text-black dark:text-white">Older posts →</span>

@@ -6,6 +6,7 @@ defmodule Mix.Tasks.PrWebsite.Gen.Tags do
 
   @doc false
   def run(_) do
+    base_path = Application.get_env(:tableau, :config)[:base_path] || ""
     posts_dir = "_posts"
     pages_dir = "_pages/tags"
 
@@ -30,7 +31,7 @@ defmodule Mix.Tasks.PrWebsite.Gen.Tags do
       %{
         title: data["title"],
         date: date,
-        permalink: "/posts/#{slug}/",
+        permalink: "#{base_path}/posts/#{slug}/",
         tags: data["tags"] || [],
         summary: data["summary"],
         body: body
@@ -67,7 +68,7 @@ permalink: "/tags/"
 #{Enum.map_join(all_tags, "\n", fn tag ->
   count = length(tag_map[tag])
   """
-  <a href="/tags/#{tag}/" class="block p-4 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+  <a href="#{base_path}/tags/#{tag}/" class="block p-4 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
     <span class="text-lg font-medium">##{tag}</span>
     <span class="text-sm text-gray-600 dark:text-gray-400 ml-2">(#{count})</span>
   </a>

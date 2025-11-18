@@ -35,11 +35,11 @@ When our form content takes up less space than the height of the screen (minus t
 <div class="flex flex-row space-x-2">
   <div class="text-center sm:w-1/2">
      <p class="text-xs text-gray-800">iPhone X</p>
-    <img src="/images/react-native-responsive-1-1.png" alt="iPhone X" class="mx-auto block">
+    <img src="/PranavRam/images/react-native-responsive-1-1.png" alt="iPhone X" class="mx-auto block">
 </div>
 <div class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone 5s</p>
-  <img src="/images/react-native-responsive-1-2.png" alt="iPhone 5s" class="mx-auto block">
+  <img src="/PranavRam/images/react-native-responsive-1-2.png" alt="iPhone 5s" class="mx-auto block">
 </div>
 </div>
 
@@ -50,11 +50,11 @@ Now let's add another field to the form, **Name**. This is the result
 <div class="flex flex-row space-x-2">
   <div class="text-center sm:w-1/2">
      <p class="text-xs text-gray-800">iPhone X</p>
-    <img src="/images/react-native-responsive-2-1.png" alt="iPhone X" class="mx-auto block">
+    <img src="/PranavRam/images/react-native-responsive-2-1.png" alt="iPhone X" class="mx-auto block">
 </div>
 <div class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone 5s</p>
-  <img src="/images/react-native-responsive-2-2.png" alt="iPhone 5s" class="mx-auto block">
+  <img src="/PranavRam/images/react-native-responsive-2-2.png" alt="iPhone 5s" class="mx-auto block">
 </div>
 </div>
 
@@ -326,11 +326,11 @@ Great, the scroll works for the iPhone 5S but it also is enabled for the iPhone 
 <div class="flex flex-row space-x-2">
 <div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone X</p>
-<img src="/images/iphone-x-scrolling.gif" alt="iPhone X scrolling" class="mx-auto block">
+<img src="/PranavRam/images/iphone-x-scrolling.gif" alt="iPhone X scrolling" class="mx-auto block">
 </div>
 <div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone 5s</p>
-<img src="/images/iphone-5s-scrolling.gif" alt="iPhone 5s scrolling" class="mx-auto block">
+<img src="/PranavRam/images/iphone-5s-scrolling.gif" alt="iPhone 5s scrolling" class="mx-auto block">
 </div>
 </div>
 
@@ -509,11 +509,11 @@ const styles = StyleSheet.create({
 <div class="flex flex-row space-x-2">
 <div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone X</p>
-<img src="/images/iphone-x.gif" alt="iPhone X" class="mx-auto block">
+<img src="/PranavRam/images/iphone-x.gif" alt="iPhone X" class="mx-auto block">
 </div>
 <div style="display: flex; flex-direction: column" class="text-center sm:w-1/2">
 <p class="text-xs text-gray-800">iPhone 5s</p>
-<img src="/images/iphone-5s.gif" alt="iPhone 5s" class="mx-auto block">
+<img src="/PranavRam/images/iphone-5s.gif" alt="iPhone 5s" class="mx-auto block">
 </div>
 </div>
 
@@ -735,7 +735,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-<img src="/images/iphone-scrolling-demo.gif" alt="iPhone scrolling demo" class="mx-auto block">
+<img src="/PranavRam/images/iphone-scrolling-demo.gif" alt="iPhone scrolling demo" class="mx-auto block">
 
 And that's a wrap for this 2 part series.
 
