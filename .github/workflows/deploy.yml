@@ -71,7 +71,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://pranavram.github.io/PranavRam
+      url: https://pranavram.github.io
     runs-on: ubuntu-latest
     needs: build
     steps:
